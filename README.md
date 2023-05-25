@@ -7,6 +7,9 @@ Logo?
 # Abstract
 
 
+# Installation
+
+
 # Cite
 If you want to use the *News in Time and Space* please quote this as follows:
 
