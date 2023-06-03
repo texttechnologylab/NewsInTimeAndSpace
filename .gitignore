@@ -74,3 +74,6 @@ crashlytics-build.properties
 # Project specific ignores
 server/MongoDBConfig.cfg
 server/target
+
+.vscode
+.DS_Store
