@@ -16,7 +16,7 @@ public class WebRequestHandler : MonoBehaviour
 
     CultureInfo en = new CultureInfo("en-US", false); // C# english CultureInfo used for converting numbers into strings.
 
-    static string serverURL = "http://localhost:4567/"; // The base URL of the webserver.
+    static string serverURL = "http://localhost:8080/news/"; // The base URL of the webserver.
     const int defaultLimit = 100;
 
     string data;

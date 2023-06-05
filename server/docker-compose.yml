@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  server:
+    build: .
+    ports:
+      - "8080:8080"
+    restart: always
+    depends_on:
+    #  - database
+    volumes:
+      - ./MongoDBConfig.cfg:/usr/local/tomcat/server/MongoDBConfig.cfg
+  # database:
+  #  image: mongo
+  #  restart: always
+

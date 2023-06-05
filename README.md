@@ -37,9 +37,7 @@ To Start the Server with Docker, run the following commands:
 
 ```bash 
 cd server
-mvn clean package
-docker build -t newsintimeandspace .
-docker run -p 8080:8080 newsintimeandspace
+docker-compose up -d
 ```
 ### Data import
 
