@@ -160,12 +160,6 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.valvesoftware.openvr.installer": {
-      "version": "file:/Users/timo/Downloads/unity-xr-plugin-installer/Assets",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {}
-    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,
