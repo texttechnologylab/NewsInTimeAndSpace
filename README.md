@@ -4,10 +4,14 @@
 ![NiTS logo](https://github.com/texttechnologylab/NewsInTimeAndSpace/assets/8282694/11cc5dc4-242b-4d70-a538-2f89f94039db)
 
 # Abstract
-The application ’NiTS’, ’News in Time and Space’, filters news report information from the GDELT database and visualizes it on a
+We present News in Time and Space (NiTS), a virtual reality application for visualization, filtering and interaction with geo-based
+events based on GDELT. The application can be used via VR glasses as well as a desktop solution for collaborative use by multiple
+users using Ubiq. The aim of NiTS is to provide a broad overview of global events and trends over time, creating a valuable resource
+for users seeking to understand and analyze world events.
+<!--The application ’NiTS’, ’News in Time and Space’, filters news report information from the GDELT database and visualizes it on a
 globe in either Virtual Reality or a desktop-designed version. This can be explored by a single user, but also includes support of adding
 a multi-person extension. Our aim is to provide a comprehensive picture of global events and trends over time making it a valuable
-resource to users seeking to understand and analyze world events.
+resource to users seeking to understand and analyze world events.-->
 
 # Installation
 
