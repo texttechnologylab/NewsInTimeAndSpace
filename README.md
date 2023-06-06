@@ -52,8 +52,8 @@ CITE
 ```
 @InProceedings{Gagel:Hustedt:Lüttig:Berg:Abrami:Mehler:2023,
   author         = {Gagel, Julian and Hustedt, Jasper and Lüttig, Timo and Berg, Theresa and Abrami, Giuseppe and Mehler, Alexander},
-  title          = {Global Event Exploration in Virtual Reality},
-  booktitle      = {TITLE},
+  title          = {News in Time and Space: Global Event Exploration in Virtual Reality},
+  booktitle      = {TBA},
   year           = {2023},
   pages          = {3},
   url            = {TBA}
