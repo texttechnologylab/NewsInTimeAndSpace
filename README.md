@@ -56,7 +56,7 @@ CITE
   booktitle      = {TBA},
   year           = {2023},
   pages          = {3},
-  url            = {TBA}
+  url            = {https://github.com/texttechnologylab/NewsInTimeAndSpace}
 }
 
 ```
