@@ -5,7 +5,7 @@ services:
     ports:
       - "8080:8080"
     restart: always
-    depends_on:
+    #depends_on:
     #  - database
     volumes:
       - ./MongoDBConfig.cfg:/usr/local/tomcat/server/MongoDBConfig.cfg
