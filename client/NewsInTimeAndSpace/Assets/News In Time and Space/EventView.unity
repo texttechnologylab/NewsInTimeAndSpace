@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 1abf9a34bb8d0a343bba165bb19deaae, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: e8dd894bc9448b646ba6a52a9361994b, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.0071443208, g: 0.016375024, b: 0.018873494, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -171,6 +171,22 @@ MonoBehaviour:
   useStaticBatching: 1
   loadOnStart: 1
   disableLoading: 0
+--- !u!1 &13368170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 7068762446378101732, guid: 2fb578800afc87244b5ba3a0fbbd11c0, type: 3}
+  m_PrefabInstance: {fileID: 1394432706}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2003561427}
+  m_Layer: 0
+  m_Name: 'Network Scene (Missing Prefab with guid: 2fb578800afc87244b5ba3a0fbbd11c0)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &64125438
 GameObject:
   m_ObjectHideFlags: 0
@@ -3705,11 +3721,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978571169}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &2003561427 stripped
+--- !u!4 &2003561427
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 7068762446378101729, guid: 2fb578800afc87244b5ba3a0fbbd11c0, type: 3}
   m_PrefabInstance: {fileID: 1394432706}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13368170}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1452920995}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2007835193 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1908925348303082841, guid: 0379e19df0e2e54488fa126d1edb09d1, type: 3}
@@ -4635,9 +4660,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73070efaa1016fc47a3b4023d9a33be2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  readme: This prefab represents the local player. It supports basic teleporting
-    and interaction, on both the desktop and in VR. Prefab variants should be created
-    for specific applications.
 --- !u!114 &5981093792543839470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4917,7 +4939,7 @@ SpriteRenderer:
   m_Size: {x: 10.24, y: 10.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &9001540565321796422
