@@ -12,9 +12,10 @@ a multi-person extension. Our aim is to provide a comprehensive picture of globa
 resource to users seeking to understand and analyze world events.-->
 
 # Screenshots
-![Screenshot](https://github.com/texttechnologylab/NewsInTimeAndSpace/assets/134629212/19df0482-3b0b-49bd-a013-6743c5fd825b)
-![grafik](https://github.com/texttechnologylab/NewsInTimeAndSpace/assets/134629212/daab7c6c-83f2-4df5-ae20-cda2d6c0a35b)
-
+![Screenshot](https://github.com/texttechnologylab/NewsInTimeAndSpace/assets/134629212/19df0482-3b0b-49bd-a013-6743c5fd825b)\
+*Filters 'Germany' and 'United States' in the Filterpool*\
+![grafik](https://github.com/texttechnologylab/NewsInTimeAndSpace/assets/134629212/daab7c6c-83f2-4df5-ae20-cda2d6c0a35b)\
+*Detailed view of an event based in Bavaria, Germany*
 
 # Demonstration
 A video demonstration of NiTS can be found [here](https://anonymfile.com/z8N6J/news-in-time-and-space-demonstration-eng.mp4).
