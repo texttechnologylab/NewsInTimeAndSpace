@@ -1,5 +1,3 @@
-[![version](https://img.shields.io/github/license/texttechnologylab/NewsInTimeAndSpace)]()
-
 # NewsInTimeAndSpace
 ![NiTS logo](https://github.com/texttechnologylab/NewsInTimeAndSpace/assets/8282694/11cc5dc4-242b-4d70-a538-2f89f94039db)
 
@@ -13,20 +11,31 @@ globe in either Virtual Reality or a desktop-designed version. This can be explo
 a multi-person extension. Our aim is to provide a comprehensive picture of global events and trends over time making it a valuable
 resource to users seeking to understand and analyze world events.-->
 
+# Screenshots
+![Screenshot](https://github.com/texttechnologylab/NewsInTimeAndSpace/assets/134629212/19df0482-3b0b-49bd-a013-6743c5fd825b)\
+*Filters 'Germany' and 'United States' in the Filterpool*\
+![grafik](https://github.com/texttechnologylab/NewsInTimeAndSpace/assets/134629212/daab7c6c-83f2-4df5-ae20-cda2d6c0a35b)\
+*Detailed view of an event based in Bavaria, Germany*
+
+# Demonstration
+A video demonstration of NiTS can be found [here](https://anonymfile.com/z8N6J/news-in-time-and-space-demonstration-eng.mp4).
+
 # Installation
+
+After you have cloned the project, you need to complete the configurations below:
 
 ## Database
 
 ### Configuration
 
-For the MongoDB configuration you have to create a file called `MongoDBConfig.cfg` in the `server` folder. The file should look like this:
+For MongoDB configuration, you need to customize the `MongoDBConfig.cfg` file in the `server` folder with your credentials. Example:
 
 ```bash
-remote_host = 
-remote_database = 
-remote_user = 
-remote_password = 
-remote_port = 27021
+remote_host = databasehost
+remote_database = databasename
+remote_user = databaseuser
+remote_password = secret
+remote_port = 27017
 ```
 
 ### Data
@@ -43,24 +52,8 @@ To Start the Server with Docker, run the following commands:
 cd server
 docker-compose up -d
 ```
+
+The base server URL can be changed inside the 'WebRequestHandler.cs' script.
 ### Data import
 
 After the server is running, new data is imported from gdelt every 15 minutes. If you want to import data from a specific time period, you can do so by querying the server with the following URL: `http://%SERVER_IP%/update/%DATE%`. The date has to be in the format `YYYY-MM-DD`. 
-
-# Cite
-If you want to use the *News in Time and Space* please quote this as follows:
-
-CITE
-
-# BibTeX
-```
-@InProceedings{Gagel:Hustedt:Lüttig:Berg:Abrami:Mehler:2023,
-  author         = {Gagel, Julian and Hustedt, Jasper and Lüttig, Timo and Berg, Theresa and Abrami, Giuseppe and Mehler, Alexander},
-  title          = {News in Time and Space: Global Event Exploration in Virtual Reality},
-  booktitle      = {TBA},
-  year           = {2023},
-  pages          = {3},
-  url            = {https://github.com/texttechnologylab/NewsInTimeAndSpace}
-}
-
-```
