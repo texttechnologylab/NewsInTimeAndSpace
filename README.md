@@ -1,5 +1,3 @@
-[![version](https://img.shields.io/github/license/texttechnologylab/NewsInTimeAndSpace)]()
-
 # NewsInTimeAndSpace
 ![NiTS logo](https://github.com/texttechnologylab/NewsInTimeAndSpace/assets/8282694/11cc5dc4-242b-4d70-a538-2f89f94039db)
 
@@ -46,21 +44,3 @@ docker-compose up -d
 ### Data import
 
 After the server is running, new data is imported from gdelt every 15 minutes. If you want to import data from a specific time period, you can do so by querying the server with the following URL: `http://%SERVER_IP%/update/%DATE%`. The date has to be in the format `YYYY-MM-DD`. 
-
-# Cite
-If you want to use the *News in Time and Space* please quote this as follows:
-
-CITE
-
-# BibTeX
-```
-@InProceedings{Gagel:Hustedt:Lüttig:Berg:Abrami:Mehler:2023,
-  author         = {Gagel, Julian and Hustedt, Jasper and Lüttig, Timo and Berg, Theresa and Abrami, Giuseppe and Mehler, Alexander},
-  title          = {News in Time and Space: Global Event Exploration in Virtual Reality},
-  booktitle      = {TBA},
-  year           = {2023},
-  pages          = {3},
-  url            = {https://github.com/texttechnologylab/NewsInTimeAndSpace}
-}
-
-```
