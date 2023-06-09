@@ -13,6 +13,8 @@ resource to users seeking to understand and analyze world events.-->
 
 # Installation
 
+After you have cloned the project, you need to complete the configurations below:
+
 ## Database
 
 ### Configuration
