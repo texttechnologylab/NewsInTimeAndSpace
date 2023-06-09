@@ -17,8 +17,7 @@ resource to users seeking to understand and analyze world events.-->
 
 
 # Demonstration
-A video demonstration of NiTS can be found here: https://hessenbox-a10.rz.uni-frankfurt.de/getlink/fiFV4QVwihNnDTDiCLwiQj/News%20in%20Time%20and%20Space%20demonstration%20eng.mp4.
-A video demonstration of NiTS can be found ![here](https://hessenbox-a10.rz.uni-frankfurt.de/getlink/fiFV4QVwihNnDTDiCLwiQj/News%20in%20Time%20and%20Space%20demonstration%20eng.mp4).
+A video demonstration of NiTS can be found [here](https://hessenbox-a10.rz.uni-frankfurt.de/getlink/fiFV4QVwihNnDTDiCLwiQj/News%20in%20Time%20and%20Space%20demonstration%20eng.mp4).
 
 # Installation
 
