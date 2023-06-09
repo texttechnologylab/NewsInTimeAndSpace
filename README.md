@@ -13,6 +13,7 @@ resource to users seeking to understand and analyze world events.-->
 
 # Screenshots
 ![Screenshot](https://github.com/texttechnologylab/NewsInTimeAndSpace/assets/134629212/19df0482-3b0b-49bd-a013-6743c5fd825b)
+![grafik](https://github.com/texttechnologylab/NewsInTimeAndSpace/assets/134629212/daab7c6c-83f2-4df5-ae20-cda2d6c0a35b)
 
 
 # Demonstration
