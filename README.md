@@ -1,5 +1,4 @@
 # NewsInTimeAndSpace
-![NiTS logo](https://github.com/texttechnologylab/NewsInTimeAndSpace/assets/8282694/11cc5dc4-242b-4d70-a538-2f89f94039db)
 
 # Abstract
 We present News in Time and Space (NiTS), a virtual reality application for visualization, filtering and interaction with geo-based
@@ -11,14 +10,8 @@ globe in either Virtual Reality or a desktop-designed version. This can be explo
 a multi-person extension. Our aim is to provide a comprehensive picture of global events and trends over time making it a valuable
 resource to users seeking to understand and analyze world events.-->
 
-# Screenshots
-![Screenshot](https://github.com/texttechnologylab/NewsInTimeAndSpace/assets/134629212/19df0482-3b0b-49bd-a013-6743c5fd825b)\
-*Filters 'Germany' and 'United States' in the Filterpool*\
-![grafik](https://github.com/texttechnologylab/NewsInTimeAndSpace/assets/134629212/daab7c6c-83f2-4df5-ae20-cda2d6c0a35b)\
-*Detailed view of an event based in Bavaria, Germany*
-
 # Demonstration
-A video demonstration of NiTS can be found [here](https://anonymfile.com/z8N6J/news-in-time-and-space-demonstration-eng.mp4).
+A video demonstration of NiTS can be found: https://anonymfile.com/z8N6J/news-in-time-and-space-demonstration-eng.mp4.
 
 # Installation
 
