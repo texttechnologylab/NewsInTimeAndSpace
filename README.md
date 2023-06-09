@@ -46,7 +46,7 @@ cd server
 docker-compose up -d
 ```
 
-The base server URL can be changed inside the 'WebRequestHandler.cs' script.
+The base server URL can be changed inside the 'ServerURL' gameobject inspector.
 ### Data import
 
 After the server is running, new data is imported from gdelt every 15 minutes. If you want to import data from a specific time period, you can do so by querying the server with the following URL: `http://%SERVER_IP%/update/%DATE%`. The date has to be in the format `YYYY-MM-DD`. 
