@@ -11,6 +11,13 @@ globe in either Virtual Reality or a desktop-designed version. This can be explo
 a multi-person extension. Our aim is to provide a comprehensive picture of global events and trends over time making it a valuable
 resource to users seeking to understand and analyze world events.-->
 
+# Screenshots
+![Screenshot](https://github.com/texttechnologylab/NewsInTimeAndSpace/assets/134629212/19df0482-3b0b-49bd-a013-6743c5fd825b)
+
+
+# Demonstration
+A video demonstration of NiTS can be found here: https://hessenbox-a10.rz.uni-frankfurt.de/getlink/fiFV4QVwihNnDTDiCLwiQj/News%20in%20Time%20and%20Space%20demonstration%20eng.mp4.
+
 # Installation
 
 After you have cloned the project, you need to complete the configurations below:
