@@ -10,11 +10,7 @@ globe in either Virtual Reality or a desktop-designed version. This can be explo
 a multi-person extension. Our aim is to provide a comprehensive picture of global events and trends over time making it a valuable
 resource to users seeking to understand and analyze world events.-->
 
-# Demonstration
-A video demonstration of NiTS can be found: https://anonymfile.com/z8N6J/news-in-time-and-space-demonstration-eng.mp4.
-
 # Installation
-
 After you have cloned the project, you need to complete the configurations below:
 
 ## Database
