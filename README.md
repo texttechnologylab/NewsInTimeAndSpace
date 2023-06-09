@@ -17,14 +17,14 @@ resource to users seeking to understand and analyze world events.-->
 
 ### Configuration
 
-For the MongoDB configuration you have to create a file called `MongoDBConfig.cfg` in the `server` folder. The file should look like this:
+For MongoDB configuration, you need to customize the `MongoDBConfig.cfg` file in the `server` folder with your credentials. Example:
 
 ```bash
-remote_host = 
-remote_database = 
-remote_user = 
-remote_password = 
-remote_port = 27021
+remote_host = databasehost
+remote_database = databasename
+remote_user = databaseuser
+remote_password = secret
+remote_port = 27017
 ```
 
 ### Data
