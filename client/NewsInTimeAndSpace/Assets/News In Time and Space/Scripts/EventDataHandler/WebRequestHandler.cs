@@ -15,8 +15,7 @@ public class WebRequestHandler : MonoBehaviour
     public float defaultDelay = 5;
 
     CultureInfo en = new CultureInfo("en-US", false); // C# english CultureInfo used for converting numbers into strings.
-
-    static string serverURL = "http://localhost:8080/news/"; // The base URL of the webserver.
+    public string serverURL; // The base URL of the webserver.
     const int defaultLimit = 100;
 
     string data;
@@ -32,6 +31,7 @@ public class WebRequestHandler : MonoBehaviour
     private void Awake()
     {
         parameters = new Dictionary<string, List<string>>();
+        serverURL = GameObject.Find("ServerURL").GetComponent<ServerURL>().serverURL;
     }
 
     public bool DataUpdated { get => dataUpdated; }
