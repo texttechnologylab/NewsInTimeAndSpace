@@ -1,3 +1,8 @@
+[![Conference](http://img.shields.io/badge/conference-HT--2023-4b44ce.svg)](https://ht.acm.org/ht2023/)
+[![version](https://img.shields.io/github/license/texttechnologylab/NewsInTimeAndSpace)]()
+[![latest](https://img.shields.io/github/v/release/texttechnologylab/NewsInTimeAndSpace)]()
+
+
 # NewsInTimeAndSpace
 
 # Abstract
