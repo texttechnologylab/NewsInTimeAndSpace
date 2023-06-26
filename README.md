@@ -46,3 +46,21 @@ The base server URL can be changed inside the 'ServerURL' gameobject inspector.
 ### Data import
 
 After the server is running, new data is imported from gdelt every 15 minutes. If you want to import data from a specific time period, you can do so by querying the server with the following URL: `http://%SERVER_IP%/update/%DATE%`. The date has to be in the format `YYYY-MM-DD`. 
+
+
+# Cite
+If you want to use the project please quote this as follows:
+
+J. Gagel, J. Hustedt, T. Lüttig, T. Berg, G. Abrami, and A. Mehler, “News in Time and Space: Global Event Exploration in Virtual Reality,” in Proceedings of 34th ACM Hypertext Conference (HT 23), 2023. accpeted
+
+## BibTeX
+```
+@inproceedings{Gagel:et:al:2023,
+    author    = {Gagel, Julian and Hustedt, Jasper and Lüttig, Timo and Berg, Theresa and Abrami, Giuseppe and Mehler, Alexander},
+    title     = {News in Time and Space: Global Event Exploration in Virtual Reality},
+    booktitle = {Proceedings of 34th ACM Hypertext Conference (HT 23)},
+    year      = {2023},
+    location  = {Rome},
+    note      = {accpeted}
+}
+```
