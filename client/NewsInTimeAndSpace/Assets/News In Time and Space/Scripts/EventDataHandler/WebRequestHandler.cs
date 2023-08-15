@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
 using System.Globalization;
@@ -13,9 +14,10 @@ using System.Globalization;
 public class WebRequestHandler : MonoBehaviour
 {
     public float defaultDelay = 5;
+    public static string serverURL; // The base URL of the webserver.
+    public Settings settings;
 
     CultureInfo en = new CultureInfo("en-US", false); // C# english CultureInfo used for converting numbers into strings.
-    public string serverURL; // The base URL of the webserver.
     const int defaultLimit = 100;
 
     string data;
@@ -28,10 +30,9 @@ public class WebRequestHandler : MonoBehaviour
     Coroutine requestHandle;
     UnityWebRequest webRequest;
 
-    private void Awake()
+    private void Start()
     {
         parameters = new Dictionary<string, List<string>>();
-        serverURL = GameObject.Find("ServerURL").GetComponent<ServerURL>().serverURL;
     }
 
     public bool DataUpdated { get => dataUpdated; }

@@ -42,6 +42,16 @@ namespace Ubiq.Samples
                 // ASCII code for spacebar
                 textEntry.Enter((char)intKeyCode);
             }
+            else if (intKeyCode == 46)
+            {
+                // ASCII code for period
+                textEntry.Enter((char)intKeyCode);
+            }
+            else if (intKeyCode == 58)
+            {
+                // ASCII code for colon
+                textEntry.Enter((char)intKeyCode);
+            }
         }
     }
 }

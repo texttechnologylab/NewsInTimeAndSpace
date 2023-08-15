@@ -170,7 +170,7 @@ public class InteractionHandler : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             RaycastHit rayHit;
-            Physics.Raycast(headCamera.ScreenPointToRay(Input.mousePosition), out rayHit, 1000f, clickableUILayer | visualizerLayer);
+            Physics.Raycast(headCamera.ScreenPointToRay(Input.mousePosition), out rayHit, 10000f, clickableUILayer | visualizerLayer);
 
             rightRaycastInteraction = true;
             rightInteractionTarget = rayHit.transform;

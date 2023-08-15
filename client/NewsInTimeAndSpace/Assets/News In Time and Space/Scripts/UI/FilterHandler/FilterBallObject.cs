@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 /// <summary>
 /// Class to handle rigidbody gameobject used as filter object.
 /// </summary>
+[System.Serializable]
 [RequireComponent(typeof(Rigidbody))]
 public class FilterBallObject : MonoBehaviour, IGraspable
 {
@@ -85,7 +86,7 @@ public class FilterBallObject : MonoBehaviour, IGraspable
         FilterBallObject ball = collision.gameObject.GetComponent<FilterBallObject>();
 
         if (filterType == FilterHandler.FilterType.actor && !IsCombined && location == FilterBallLocation.InHand
-            && ball != null && ball.filterType == FilterHandler.FilterType.actor && !ball.IsCombined && ball.Location == FilterBallLocation.InHand)
+            && ball != null && ball.filterType == FilterHandler.FilterType.actor && !ball.IsCombined && ball.Location == FilterBallLocation.Free)
         {
             isCombined = true;
             ball.isCombined = true;

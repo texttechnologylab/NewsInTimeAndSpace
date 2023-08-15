@@ -73,7 +73,8 @@ public class MapDataHandler : MonoBehaviour
                 groups[aggregationLevel] = jsonParser.parseGroupResultJSON(groupHandler[aggregationLevel].Data);
                 groupsUpdated[aggregationLevel] = true;
                 groupsUnread[aggregationLevel] = true;
-                Debug.Log(((GroupAggregationLevel)aggregationLevel).ToString() + " groups received and parsed");
+                Debug.Log(groups[aggregationLevel].Length + " " + ((GroupAggregationLevel)aggregationLevel).ToString()
+                    + " groups received and parsed");
             }
         }
 

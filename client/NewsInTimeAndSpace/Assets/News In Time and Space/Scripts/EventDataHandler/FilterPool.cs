@@ -8,6 +8,7 @@ using System;
 /// 
 /// This class contains all filters customizable by the user.
 /// </summary>
+[Serializable]
 public class FilterPool
 {
     bool datesSet;

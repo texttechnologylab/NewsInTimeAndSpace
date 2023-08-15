@@ -24,7 +24,7 @@ public class HandRayCaster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Physics.Raycast(transform.position, -transform.up, out rayHit, 1000f, visualizerLayer | uiLayer | raycastBlocker))
+        if (Physics.Raycast(transform.position, transform.forward, out rayHit, 1000f, visualizerLayer | uiLayer | raycastBlocker))
         {
             Vector3[] positions = { transform.position, rayHit.point };
             lineRenderer.widthMultiplier = player.position.magnitude / baseDistance;

@@ -1,0 +1,444 @@
+---
+openapi: 3.0.0
+info:
+  title: "News in time & space"
+  description: "Api zum abstrahieren der GDELT Event Database sowie Knowledge Graph und weiteren Datenquellen die die Visualisierung unterstützen"
+  version: "0.1-alpha"
+
+servers:
+  - url: http://localhost:4567
+    description: temporary localhost url (when starting locally on a windows, don't know if apple is the same)
+
+paths:
+  /events/event/{GLOBALEVENTID}:
+    get:
+      summary: Returns an event via its ID.
+      parameters:
+        - name: GLOBALEVENTID
+          in: path
+          description: ID of event to use.
+          schema:
+            type: integer
+          required: true
+      responses:
+        200:
+          description: An event to be returned.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Event"
+
+  /events/multiple:
+    get:
+      summary: Returns multiple events via their IDs.
+      parameters:
+        - $ref: "#/components/parameters/EventIds"
+      responses:
+        200:
+          description: Events to be returned.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Events"
+
+  /events/ids:
+    get:
+      summary: Returns the IDs of events via search filters.
+      parameters:
+        - $ref: "#/components/parameters/Actors"
+        - $ref: "#/components/parameters/Coordinates"
+        - $ref: "#/components/parameters/Radius"
+        - $ref: "#/components/parameters/GoldsteinScaleMin"
+        - $ref: "#/components/parameters/GoldsteinScaleMax"
+        - $ref: "#/components/parameters/ToneMin"
+        - $ref: "#/components/parameters/ToneMax"
+        - $ref: "#/components/parameters/startTime"
+        - $ref: "#/components/parameters/endTime"
+        - $ref: "#/components/parameters/Limit"
+        - $ref: "#/components/parameters/Types"
+      responses:
+        200:
+          description: Event IDs to be returned.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Events"
+
+  /events:
+    get:
+      summary: Returns whole events via search filters.
+      parameters:
+        - $ref: "#/components/parameters/Actors"
+        - $ref: "#/components/parameters/Coordinates"
+        - $ref: "#/components/parameters/Radius"
+        - $ref: "#/components/parameters/GoldsteinScaleMin"
+        - $ref: "#/components/parameters/GoldsteinScaleMax"
+        - $ref: "#/components/parameters/ToneMin"
+        - $ref: "#/components/parameters/ToneMax"
+        - $ref: "#/components/parameters/startTime"
+        - $ref: "#/components/parameters/endTime"
+        - $ref: "#/components/parameters/Limit"
+        - $ref: "#/components/parameters/Types"
+      responses:
+        200:
+          description: Events to be returned.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Events"
+
+  /groups/{aggregation}/ids:
+    get:
+      summary: Returns IDs of events via search filters, grouped.
+      parameters:
+        - $ref: "#/components/parameters/Actors"
+        - $ref: "#/components/parameters/Coordinates"
+        - $ref: "#/components/parameters/Radius"
+        - $ref: "#/components/parameters/GoldsteinScaleMin"
+        - $ref: "#/components/parameters/GoldsteinScaleMax"
+        - $ref: "#/components/parameters/ToneMin"
+        - $ref: "#/components/parameters/ToneMax"
+        - $ref: "#/components/parameters/startTime"
+        - $ref: "#/components/parameters/endTime"
+        - $ref: "#/components/parameters/Limit"
+        - $ref: "#/components/parameters/Types"
+        - $ref: "#/components/parameters/Aggregation"
+      responses:
+        200:
+          description: List of groups and count with event IDs.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Groups"
+
+  /groups/{aggregation}:
+    get:
+      summary: Returns events via search filters, grouped.
+      parameters:
+        - $ref: "#/components/parameters/Actors"
+        - $ref: "#/components/parameters/Coordinates"
+        - $ref: "#/components/parameters/Radius"
+        - $ref: "#/components/parameters/GoldsteinScaleMin"
+        - $ref: "#/components/parameters/GoldsteinScaleMax"
+        - $ref: "#/components/parameters/ToneMin"
+        - $ref: "#/components/parameters/ToneMax"
+        - $ref: "#/components/parameters/startTime"
+        - $ref: "#/components/parameters/endTime"
+        - $ref: "#/components/parameters/Limit"
+        - $ref: "#/components/parameters/Types"
+        - $ref: "#/components/parameters/Aggregation"
+      responses:
+        200:
+          description: List of groups and count with events.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Groups"
+
+  /extra/types:
+    get:
+      summary: Returns available Event Types sorted.
+      parameters:
+        - name: type_filter
+          description: Filter for Event Types (EXACT for the exact type, BASE for one of the 20 basic types)
+          in: query
+          schema:
+            type: string
+            enum: [EXACT, BASE]
+          required: true
+        - $ref: "#/components/parameters/Actors"
+        - $ref: "#/components/parameters/Coordinates"
+        - $ref: "#/components/parameters/Radius"
+        - $ref: "#/components/parameters/GoldsteinScaleMin"
+        - $ref: "#/components/parameters/GoldsteinScaleMax"
+        - $ref: "#/components/parameters/ToneMin"
+        - $ref: "#/components/parameters/ToneMax"
+        - $ref: "#/components/parameters/startTime"
+        - $ref: "#/components/parameters/endTime"
+        - $ref: "#/components/parameters/Limit"
+        - $ref: "#/components/parameters/Types"
+      responses:
+        200:
+          description: List of available Event Types.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Groups"
+
+  /extra/actors:
+    get:
+      summary: Returns available Actors sorted.
+      parameters:
+        - $ref: "#/components/parameters/Actors"
+        - $ref: "#/components/parameters/Coordinates"
+        - $ref: "#/components/parameters/Radius"
+        - $ref: "#/components/parameters/GoldsteinScaleMin"
+        - $ref: "#/components/parameters/GoldsteinScaleMax"
+        - $ref: "#/components/parameters/ToneMin"
+        - $ref: "#/components/parameters/ToneMax"
+        - $ref: "#/components/parameters/startTime"
+        - $ref: "#/components/parameters/endTime"
+        - $ref: "#/components/parameters/Limit"
+        - $ref: "#/components/parameters/Types"
+      responses:
+        200:
+          description: List of available Actors.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Groups"
+
+  /update/{date}:
+    put:
+      summary: update database with events at $date
+      parameters:
+        - name: date
+          schema:
+            type: string
+            format: date
+          in: path
+          required: true
+      responses:
+        200:
+          description: The Server is starting to load the events
+        400:
+          description: Error
+
+components:
+  parameters:
+    Types:
+      name: type
+      description: Event Type Numbers (eg. 080, 084, 040, ...) -> Multiple Types always filtered with OR (one Event only has 1 Type).
+      in: query
+      required: false
+      schema:
+        type: array
+        items:
+          type: string
+    Actors:
+      name: actor
+      description: To combine two actors Actor1 and Actor2 (with AND), write Actor1~Actor2, list members combined with OR.
+      in: query
+      required: false
+      schema:
+        type: array
+        items:
+          type: string
+    EventIds:
+      name: id
+      in: query
+      required: true
+      schema:
+        type: array
+        items:
+          type: string
+    Coordinates:
+      name: coordinates
+      in: query
+      required: false
+      schema:
+        type: object
+        required:
+          - lat
+          - long
+        properties:
+          lat:
+            type: number
+            default: null
+          long:
+            type: number
+            default: null
+    Radius:
+      name: radius
+      in: query
+      required: false
+      description: Search radius around coordinates in km.
+      schema:
+        type: number
+    startTime:
+      name: startTime
+      description: Schema = YYYY-MM-DD
+      in: query
+      required: false
+      schema:
+        type: string
+    endTime:
+      name: endTime
+      description: Schema = YYYY-MM-DD
+      in: query
+      required: false
+      schema:
+        type: string
+    Limit:
+      name: limit
+      in: query
+      required: false
+      description: limit the result size
+      schema:
+        type: integer
+        default: 100
+    Aggregation:
+      name: aggregation
+      in: path
+      description: Aggregation of grouping ("country", "region" or "city/subregion").
+      schema:
+        type: string
+        enum: [country, region, city]
+      required: true
+    GoldsteinScaleMin:
+      name: GoldsteinScaleLow
+      in: query
+      required: false
+      description: Set the minmal Goldstein value
+      schema:
+        type: number
+    GoldsteinScaleMax:
+      name: GoldsteinScaleHigh
+      in: query
+      required: false
+      description: Set the maximal Goldstein value
+      schema:
+        type: number
+    ToneMin:
+      name: ToneMin
+      in: query
+      required: false
+      description: Set the minmal Tone value
+      schema:
+        type: number
+    ToneMax:
+      name: ToneMax
+      in: query
+      required: false
+      description: Set the maximal Tone value
+      schema:
+        type: number
+
+  schemas:
+    Event:
+      type: object
+      properties:
+        #ggf doch bessere eigene IDs
+        #GLOBALEVENTID:
+        #  type: integer
+        _id:
+          type: string
+        Location:
+          $ref: "#/components/schemas/GeoJson"
+        Actors:
+          type: array
+          items:
+            $ref: "#/components/schemas/Actor"
+        type:
+          description: http://data.gdeltproject.org/documentation/CAMEO.Manual.1.1b3.pdf
+          type: string
+        date:
+          type: string
+          format: date-time
+        source:
+          type: string
+          format: url
+        themes:
+          type: array
+          items:
+            type: string
+        counts:
+          type: array
+          items:
+            $ref: "#/components/schemas/Count"
+        media:
+          type: array
+          items:
+            $ref: "#/components/schemas/Media"
+        title:
+          type: string
+          description: Title for Event
+
+    Events:
+      type: array
+      items:
+        $ref: "#/components/schemas/Event"
+
+    Groups:
+      type: array
+      items:
+        $ref: "#/components/schemas/Group"
+    Group:
+      type: object
+      properties:
+        Count:
+          type: integer
+        Location:
+          $ref: "#/components/schemas/GeoJson"
+        Events:
+          $ref: "#/components/schemas/Events"
+
+    GeoJson:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - point
+        coordinates:
+          type: array
+          items:
+            type: number
+            maximum: 180
+            minimum: -180
+          maxItems: 2
+          minItems: 2
+
+    Actor:
+      type: object
+      properties:
+        Location:
+          description: Location of the entity, could be Adress or coordinates
+          anyOf:
+            - $ref: "#/components/schemas/GeoJson"
+            - $ref: "#/components/schemas/Adress"
+        name:
+          type: string
+        type:
+          description: NGO, Goverment, Person, etc
+          type: string
+
+    Adress:
+      type: object
+      properties:
+        country:
+          type: string
+        region:
+          type: string
+        city:
+          type: string
+        street:
+          type: string
+        POI:
+          description: Point of Interest
+          type: string
+
+    Media:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - picture
+            - text
+            - video
+        content:
+          oneOf:
+            - type: string
+              format: url
+            - type: string
+
+    Count:
+      type: object
+      properties:
+        type:
+          type: string
+        count:
+          type: integer
+        location:
+          $ref: "#/components/schemas/GeoJson"
