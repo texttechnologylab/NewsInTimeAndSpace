@@ -267,7 +267,7 @@ public class Slider3D : MonoBehaviour
     /// Assumes a correct maxSliderIndex (call after updateMaxAllowedIndex() if not guaranteed).
     /// </summary>
     /// <param name="value">Percentage (0-1) of the minSlider position along the slider</param>
-    void updateMinSliderIndex(float value)
+    void updateMinSliderIndex(float value, bool ignoreMaxSlider = false)
     {
         value = Mathf.Clamp01(value);
 
@@ -276,7 +276,7 @@ public class Slider3D : MonoBehaviour
         minSliderIndex = Mathf.RoundToInt(value * (float)(allowedValueCount - 1));
 
         // Clamp min index to max index
-        if (minSliderIndex > maxSliderIndex)
+        if (!ignoreMaxSlider && minSliderIndex > maxSliderIndex)
         {
             minSliderIndex = maxSliderIndex;
         }
@@ -292,9 +292,9 @@ public class Slider3D : MonoBehaviour
     /// Calculates the fraction that value equals of the range [minValue, maxValue] and updates minSliderIndex.
     /// </summary>
     /// <param name="value">The value that minSliderIndex should be updated to. It will be rounded to the nearest allowed value.</param>
-    void updateMinSliderIndexByValue(float value)
+    public void updateMinSliderIndexByValue(float value, bool ignoreMaxSlider = false)
     {
-        updateMinSliderIndex((value - MinValueLimit) / (MaxValueLimit - MinValueLimit));
+        updateMinSliderIndex((value - MinValueLimit) / (MaxValueLimit - MinValueLimit), ignoreMaxSlider);
     }
 
     /// <summary>
@@ -338,7 +338,7 @@ public class Slider3D : MonoBehaviour
     /// Calculates the fraction that value equals of the range [minValue, maxValue] and updates minSliderIndex.
     /// </summary>
     /// <param name="value">The value that minSliderIndex should be updated to. It will be rounded to the nearest allowed value.</param>
-    void updateMaxSliderIndexByValue(float value, bool ignoreMinSlider = false)
+    public void updateMaxSliderIndexByValue(float value, bool ignoreMinSlider = false)
     {
         updateMaxSliderIndex((value - MinValueLimit) / (MaxValueLimit - MinValueLimit), ignoreMinSlider);
     }

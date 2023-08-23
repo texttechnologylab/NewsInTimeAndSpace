@@ -24,6 +24,12 @@ public class ToneSlider : MonoBehaviour
         return slider.getMinValue();
     }
 
+    public void setTone(float minTone, float maxTone)
+    {
+        slider.updateMinSliderIndexByValue(minTone, true);
+        slider.updateMaxSliderIndexByValue(maxTone, true);
+    }
+
     private void Start()
     {
         minText = minSliderScalableButton.GetComponentInChildren<TMPro.TMP_Text>();

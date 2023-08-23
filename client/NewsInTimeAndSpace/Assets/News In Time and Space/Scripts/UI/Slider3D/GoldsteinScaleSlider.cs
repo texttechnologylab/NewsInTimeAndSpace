@@ -24,6 +24,12 @@ public class GoldsteinScaleSlider : MonoBehaviour
         return slider.getMinValue();
     }
 
+    public void setGoldstein(float minGoldstein, float maxGoldstein)
+    {
+        slider.updateMaxSliderIndexByValue(maxGoldstein, true);
+        slider.updateMinSliderIndexByValue(minGoldstein, true);
+    }
+
     private void Start()
     {
         minText = minSliderScalableButton.GetComponentInChildren<TMPro.TMP_Text>();

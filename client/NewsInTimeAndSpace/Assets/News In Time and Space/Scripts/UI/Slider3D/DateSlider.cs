@@ -32,6 +32,15 @@ public class DateSlider : MonoBehaviour
         return DateTime.Today.AddDays(days);
     }
 
+    public void setDates(DateTime startDate, DateTime endDate)
+    {
+        int maxSlider = -(DateTime.Today - endDate).Days;
+        int minSlider = -(DateTime.Today - startDate).Days;
+
+        slider.updateMaxSliderIndexByValue(maxSlider, true);
+        slider.updateMinSliderIndexByValue(minSlider, true);
+    }
+
     private void Start()
     {
         minText = minSliderScalableButton.GetComponentInChildren<TMPro.TMP_Text>();

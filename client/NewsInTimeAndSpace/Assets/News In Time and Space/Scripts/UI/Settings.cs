@@ -56,7 +56,7 @@ public class Settings : MonoBehaviour
         // Load saved settings or default
         ServerURL = PlayerPrefs.GetString("serverURL", "http://localhost:8080/news/");
         WebRequestHandler.serverURL = ServerURL;
-        float x = PlayerPrefs.GetFloat("handRotationOffsetX", 0);
+        float x = PlayerPrefs.GetFloat("handRotationOffsetX", 80);
         float y = PlayerPrefs.GetFloat("handRotationOffsetY", 0);
         float z = PlayerPrefs.GetFloat("handRotationOffsetZ", 0);
 
