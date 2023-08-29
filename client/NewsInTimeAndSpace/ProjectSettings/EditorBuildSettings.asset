@@ -4,8 +4,12 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/News In Time and Space/EventView.unity
+    guid: aabb58ac8be74c948abdb5869388be10
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 518569641b861494ebad3e217a7c15e7, type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: e80aedc871e19784aa6225b06d175f2f, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 2f12b0d9472bb4c16b7e47e92dcd9b32, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 3dfeaa8471a8440989b2b9cca141dc10, type: 2}

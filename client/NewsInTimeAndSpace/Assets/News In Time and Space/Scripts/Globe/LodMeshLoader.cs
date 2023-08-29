@@ -25,10 +25,10 @@ public class LodMeshLoader : MonoBehaviour
 
 	public void Load()
 	{
-		MeshRenderer[] highResRenderers = CreateRenderers(meshFileHighRes, mat);
+		//MeshRenderer[] highResRenderers = CreateRenderers(meshFileHighRes, mat);
 		MeshRenderer[] lowResRenderers = CreateRenderers(meshFileLowRes, lowResMat);
 
-		Debug.Assert(highResRenderers.Length == lowResRenderers.Length, "Mismatch in number of high and low res meshes");
+		//Debug.Assert(highResRenderers.Length == lowResRenderers.Length, "Mismatch in number of high and low res meshes");
 
 		/*for (int i = 0; i < highResRenderers.Length; i++)
 		{

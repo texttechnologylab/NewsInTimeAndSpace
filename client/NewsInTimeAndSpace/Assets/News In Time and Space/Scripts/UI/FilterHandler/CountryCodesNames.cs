@@ -2,7 +2,7 @@ using Org.BouncyCastle.Utilities;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.SymbolStore;
-using UnityEditor.VersionControl;
+//using UnityEditor.VersionControl;
 using UnityEngine;
 /// <summary>
 /// Class to read json into c#.

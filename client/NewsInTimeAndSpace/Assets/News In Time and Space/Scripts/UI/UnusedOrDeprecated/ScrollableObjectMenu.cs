@@ -6,7 +6,7 @@ using System;
 using System.Linq;
 using UnityEngine.UI;
 using System.ComponentModel;
-using UnityEditorInternal;
+//using UnityEditorInternal;
 
 /// <summary>
 /// An interface menu that can be filled with filters, and groups for sorting them in categories. Creates interactable balls for filters and can fill them with extra objects.
