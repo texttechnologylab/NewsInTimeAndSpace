@@ -105,7 +105,7 @@ public class GroupVisualizerManager : VisualizerManager
 public class GroupConnection
 {
     static int minResolution = 3;
-    static int maxResolution = 100;
+    static int maxResolution = 50;
 
     public Group groupA;
     public Group groupB;
