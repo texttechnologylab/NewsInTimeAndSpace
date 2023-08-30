@@ -5,7 +5,7 @@ OcclusionCullingSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_OcclusionBakeSettings:
-    smallestOccluder: 10
+    smallestOccluder: 1
     smallestHole: 0.25
     backfaceThreshold: 5
   m_SceneGUID: aabb58ac8be74c948abdb5869388be10
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.007083979, g: 0.016306361, b: 0.018843545, a: 1}
+  m_IndirectSpecularColor: {r: 0.0070420047, g: 0.016169224, b: 0.018787129, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4908,7 +4908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meshFileHighRes: {fileID: 4900000, guid: 7a1d6ae3cf792cc4196a745ce38c44f5, type: 3}
-  meshFileLowRes: {fileID: 4900000, guid: 0931e89bb897edf4c94e9512f638a892, type: 3}
+  meshFileLowRes: {fileID: 4900000, guid: 54f02f4fbac761244a28bef09408b3b8, type: 3}
   mat: {fileID: 2100000, guid: 49c424e61fd48bb4abd14e4d44302d98, type: 2}
   lowResMat: {fileID: 2100000, guid: 49c424e61fd48bb4abd14e4d44302d98, type: 2}
   useStaticBatching: 1
@@ -9707,7 +9707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c885db54ed775c04ab4248b8dafc4e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadFile: {fileID: 4900000, guid: 49aa30b42e39d0a4aaf35ac0797dd0c2, type: 3}
+  loadFile: {fileID: 4900000, guid: 02c541e7d80a4ea41972bd82883fef19, type: 3}
   mat: {fileID: 2100000, guid: 42b7ac7993904f74ca2305d110305ffb, type: 2}
   useStaticBatching: 1
   loadOnStart: 0
