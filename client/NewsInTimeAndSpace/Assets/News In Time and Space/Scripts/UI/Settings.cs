@@ -54,7 +54,7 @@ public class Settings : MonoBehaviour
     void Awake()
     {
         // Load saved settings or default
-        ServerURL = PlayerPrefs.GetString("serverURL", "http://localhost:8080/news/");
+        ServerURL = PlayerPrefs.GetString("serverURL", "http://api.nits.texttechnologylab.org/news/");
         WebRequestHandler.serverURL = ServerURL;
         float x = PlayerPrefs.GetFloat("handRotationOffsetX", 80);
         float y = PlayerPrefs.GetFloat("handRotationOffsetY", 0);
