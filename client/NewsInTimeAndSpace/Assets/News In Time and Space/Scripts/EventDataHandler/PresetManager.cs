@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 // TODO: Delete preset
 public class PresetManager : MonoBehaviour
@@ -156,15 +157,39 @@ public class PresetManager : MonoBehaviour
             // TODO: Combined filterballs
         }
 
-        // TODO: Set Sliders to values
-        FilterPool newFilterPool = preset.toFilterPool();
-        toneSlider.setTone(preset.minTone, preset.maxTone);
-        dateSlider.setDates(newFilterPool.StartDate, newFilterPool.EndDate);
-        goldSteinSlider.setGoldstein(preset.minGoldstein, preset.maxGoldstein);
+        clearFilters();
 
-        // Overwrite old Filterpool
+        toneSlider.setTone(preset.minTone, preset.maxTone);
+        mapViewHandler.filterPool.setTone(preset.minTone, preset.maxTone);
+
+        dateSlider.setDates(DateTime.Parse(preset.startDate), DateTime.Parse(preset.endDate));
+        mapViewHandler.filterPool.setDates(DateTime.Parse(preset.startDate), DateTime.Parse(preset.endDate));
+
+        goldSteinSlider.setGoldstein(preset.minGoldstein, preset.maxGoldstein);
+        mapViewHandler.filterPool.setGoldstein(preset.minGoldstein, preset.maxGoldstein);
+
+        return true;
+    }
+
+    public void clearFilters()
+    {
+        // Remove FilterBalls from FilterHandler and scene
+        GameObject[] filterObjects = filterHandler.filterObjects.ToArray();
+        foreach (GameObject g in filterObjects)
+        {
+            filterHandler.RemoveFromHandler(g);
+            Destroy(g);
+        }
+
+        // Overwrite filterPool
+        FilterPool newFilterPool = new FilterPool();
         newFilterPool.HasChanged = true;
+        newFilterPool.setDates(DateTime.Today, DateTime.Today.AddDays(-3));
         mapViewHandler.filterPool = newFilterPool;
-        return false;
+
+        // Reset Sliders
+        toneSlider.setTone(-100, 100);
+        goldSteinSlider.setGoldstein(-10, 10);
+        dateSlider.setDates(DateTime.Today, DateTime.Today.AddDays(-3));
     }
 }
