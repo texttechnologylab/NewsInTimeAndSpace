@@ -24,6 +24,7 @@ public class MapViewHandler : MonoBehaviour
     public float regionDistanceThreshold = 250f;
     public float cityDistanceThreshold = 175f;
     public float globeRadius;
+    public GameObject loadSymbol;
     System.DateTime defaultStartDate = System.DateTime.Now.AddDays(0);
     System.DateTime defaultEndDate = System.DateTime.Now;
     ViewMode viewMode;
@@ -56,6 +57,7 @@ public class MapViewHandler : MonoBehaviour
         viewMode = ViewMode.Groups;
         groupAggregationLevel = GroupAggregationLevel.Country;
         eventIDs = new string[0];
+        loadSymbol.SetActive(false);
 
         // Trigger initial data update
         updateGroupData = true;
@@ -93,6 +95,7 @@ public class MapViewHandler : MonoBehaviour
             }
 
             updateGroupData = false;
+            loadSymbol.SetActive(true);
         }
     }
 
@@ -117,29 +120,53 @@ public class MapViewHandler : MonoBehaviour
         float playerDistance = Vector3.Distance(player.transform.position, Vector3.zero);
         if (playerDistance > regionDistanceThreshold)
         {
-            if (groupAggregationLevel != GroupAggregationLevel.Country && dataHandler.GroupsUpdated[(int)GroupAggregationLevel.Country])
+            if (dataHandler.GroupsUpdated[(int)GroupAggregationLevel.Country])
             {
-                groupAggregationLevel = GroupAggregationLevel.Country;
-                updateGroupVisualization = true;
-                Debug.Log("Aggregation level changed to " + groupAggregationLevel.ToString());
+                if (groupAggregationLevel != GroupAggregationLevel.Country)
+                {
+                    groupAggregationLevel = GroupAggregationLevel.Country;
+                    updateGroupVisualization = true;
+                    Debug.Log("Aggregation level changed to " + groupAggregationLevel.ToString());
+                }
+                loadSymbol.SetActive(false);
+            } 
+            else
+            {
+                loadSymbol.SetActive(true);
             }
         }
         else if (playerDistance > cityDistanceThreshold)
         {
-            if (groupAggregationLevel != GroupAggregationLevel.Region && dataHandler.GroupsUpdated[(int)GroupAggregationLevel.Region])
+            if (dataHandler.GroupsUpdated[(int)GroupAggregationLevel.Region])
             {
-                groupAggregationLevel = GroupAggregationLevel.Region;
-                updateGroupVisualization = true;
-                Debug.Log("Aggregation level changed to " + groupAggregationLevel.ToString());
+                if (groupAggregationLevel != GroupAggregationLevel.Region)
+                {
+                    groupAggregationLevel = GroupAggregationLevel.Region;
+                    updateGroupVisualization = true;
+                    Debug.Log("Aggregation level changed to " + groupAggregationLevel.ToString());
+                }
+                loadSymbol.SetActive(false);
+            }
+            else
+            {
+                loadSymbol.SetActive(true);
             }
         }
         else
         {
-            if (groupAggregationLevel != GroupAggregationLevel.City && dataHandler.GroupsUpdated[(int)GroupAggregationLevel.City])
+            if (dataHandler.GroupsUpdated[(int)GroupAggregationLevel.City])
             {
-                groupAggregationLevel = GroupAggregationLevel.City;
-                updateGroupVisualization = true;
-                Debug.Log("Aggregation level changed to " + groupAggregationLevel.ToString());
+                if (groupAggregationLevel != GroupAggregationLevel.City)
+                {
+                    groupAggregationLevel = GroupAggregationLevel.City;
+                    updateGroupVisualization = true;
+                    Debug.Log("Aggregation level changed to " + groupAggregationLevel.ToString());
+                }
+                loadSymbol.SetActive(false);
+            }
+            else
+            {
+                loadSymbol.SetActive(true);
             }
         }
     }
@@ -156,6 +183,7 @@ public class MapViewHandler : MonoBehaviour
             groupViewManager.updateGroupVisualizers(dataHandler.GetGroups(groupAggregationLevel), groupAggregationLevel, globeRadius);
             updateGroupVisualization = false;
             Debug.Log("Visualization updated.");
+            loadSymbol.SetActive(false);
         }
     }
 

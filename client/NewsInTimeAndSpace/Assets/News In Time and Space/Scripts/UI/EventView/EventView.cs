@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
-using WebSocketSharp.Server;
 /// <summary>
 /// Class which handles the EventView Object.
 /// </summary>
@@ -87,6 +87,20 @@ public class EventView : MonoBehaviour
         {
             filterCurrentIndex = 0;
             this.eventVisualizers = new List<EventVisualizer>(eventVisualizer);
+
+            // Move Events without titles to the end
+            List<EventVisualizer> emptyEvents = new List<EventVisualizer>();
+            foreach(EventVisualizer visualizer in this.eventVisualizers)
+            {
+                if (visualizer.NewsEvent.Title == "" || visualizer.NewsEvent.Title == null)
+                {
+                    emptyEvents.Add(visualizer);
+                }
+            }
+
+            this.eventVisualizers = this.eventVisualizers.Except(emptyEvents).ToList();
+            this.eventVisualizers.AddRange(emptyEvents);
+
             searchPictures(eventVisualizer);
             changeEvent(this.eventVisualizers[0]);
         }
@@ -109,7 +123,17 @@ public class EventView : MonoBehaviour
         if (eventVisualizer != null)
         {
             int index = eventVisualizers.IndexOf(eventVisualizer);
-            eventTitleText.text = eventVisualizer.NewsEvent.Title;
+            if (eventVisualizer.NewsEvent.Title == "" || eventVisualizer.NewsEvent.Title == null)
+            {
+                string source = eventVisualizer.NewsEvent.Source.Replace("http://", "");
+                source = source.Replace("https://", "");
+                source = source.Substring(0, source.IndexOf("/"));
+                eventTitleText.text = source;
+            }
+            else
+            {
+                eventTitleText.text = eventVisualizer.NewsEvent.Title;
+            }
             eventSourceText.text = eventVisualizer.NewsEvent.Source;
             eventDateText.text = eventVisualizer.NewsEvent.Date.ToLongDateString();
             eventLocationText.text = "Location:\n" + eventVisualizer.NewsEvent.LocationName;
