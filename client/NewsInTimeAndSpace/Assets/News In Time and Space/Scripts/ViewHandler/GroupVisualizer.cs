@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using WebSocketSharp;
 
 /// <summary>
 /// GroupVisualizer
@@ -53,7 +54,15 @@ public class GroupVisualizer : Visualizer
         if (group.AggregationLevel == GroupAggregationLevel.Region || group.AggregationLevel == GroupAggregationLevel.City || group.AggregationLevel == GroupAggregationLevel.Country)
         {
             // Tell mapviewhandler to trigger event data update & event visualization update
-            mapViewHandler.showEvents(group.EventIDs);
+            // TODO: Hotfix: limit number of events to 500 in one Request
+            if (group.EventIDs.Length > 500)
+            {
+                mapViewHandler.showEvents(group.EventIDs.SubArray(0, 500));
+            }
+            else
+            {
+                mapViewHandler.showEvents(group.EventIDs);
+            }
         }
 
         // TODO: Handle deactivation of eventVisualizers (self.onDeactivate and on change of aggregation)
