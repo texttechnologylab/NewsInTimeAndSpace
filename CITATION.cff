@@ -1,0 +1,68 @@
+cff-version: 1.2.0
+title: News in Time and Space
+message: 'If you use this software, please cite it as below.'
+type: software
+authors:
+  - family-names: Gagel
+    given-names: Julian
+  - family-names: Hustedt
+    given-names: Jasper
+  - family-names: Lüttig
+    given-names: Timo
+  - family-names: Berg
+    given-names: Theresa
+  - family-names: Abrami
+    given-names: Giuseppe
+    orcid: 'https://orcid.org/0000-0002-7084-4909'
+  - family-names: Mehler
+    given-names: Alexander
+    orcid: 'https://orcid.org/0000-0003-2567-7539'
+identifiers:
+  - type: doi
+    value: 10.1145/3603163.3609080
+url: 'https://github.com/texttechnologylab/NewsInTimeAndSpace'
+abstract: >-
+  We present News in Time and Space (NiTS), a virtual
+  reality application for visualization, filtering and
+  interaction with geo-referenced events based on GDELT. It
+  can be used both via VR glasses and as a desktop solution
+  for shared use by multiple users with Ubiq. The aim of
+  NiTS is to provide overviews of global events and trends
+  in order to create a resource for their monitoring and
+  analysis.
+license: AGPL-3.0-or-later
+version: 1
+date-released: '2023-09-04'
+preferred-citation:
+  authors:
+    - family-names: Gagel
+      given-names: Julian
+    - family-names: Hustedt
+      given-names: Jasper
+    - family-names: Lüttig
+      given-names: Timo
+    - family-names: Berg
+      given-names: Theresa
+    - family-names: Abrami
+      given-names: Giuseppe
+      orcid: 'https://orcid.org/0000-0002-7084-4909'
+    - family-names: Mehler
+      given-names: Alexander
+      orcid: 'https://orcid.org/0000-0003-2567-7539'
+  identifiers:
+    - type: doi
+      value: 10.1145/3603163.3609080
+  title: 'News in Time and Space: Global Event Exploration in Virtual Reality'
+  year: 2023
+  collection-title: Proceedings of the 34th ACM Conference on Hypertext and Social Media
+  publisher:
+    name: 'Association for Computing Machinery'
+  pages: '3'
+  collection-type: proceedings
+  conference:
+    date-begin: '2023-09-04'
+    date-end: '2023-09-08'
+    name: 34th ACM Conference on Hypertext and Social Media (HT 2023)
+    city: Rom
+    country: Italy
+  type: conference-paper
