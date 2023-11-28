@@ -58,6 +58,9 @@ If you want to use the project please quote this as follows:
 
 J. Gagel, J. Hustedt, T. Lüttig, T. Berg, G. Abrami, and A. Mehler, “News in Time and Space: Global Event Exploration in Virtual Reality,” in Proceedings of 34th ACM Hypertext Conference (HT 23), 2023. accpeted
 
+# Globe
+Our globe is based on Sebastian Lagues game: https://github.com/SebLague/Geographical-Adventures
+
 ## BibTeX
 ```
 @inproceedings{Gagel:et:al:2023,
