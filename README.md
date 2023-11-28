@@ -56,7 +56,7 @@ After the server is running, new data is imported from gdelt every 15 minutes. I
 # Cite
 If you want to use the project please quote this as follows:
 
-J. Gagel, J. Hustedt, T. Lüttig, T. Berg, G. Abrami, and A. Mehler, “News in Time and Space: Global Event Exploration in Virtual Reality,” in Proceedings of 34th ACM Hypertext Conference (HT 23), 2023. accpeted
+Julian Gagel, Jasper Hustedt, Timo Lüttig, Theresa Berg, Giuseppe Abrami and Alexander Mehler. (2023). "News in Time and Space: Global Event Exploration in Virtual Reality." Proceedings of the 34th ACM Conference on Hypertext and Social Media. 
 
 # Globe
 Our globe is based on Sebastian Lagues game: https://github.com/SebLague/Geographical-Adventures
@@ -64,11 +64,26 @@ Our globe is based on Sebastian Lagues game: https://github.com/SebLague/Geograp
 ## BibTeX
 ```
 @inproceedings{Gagel:et:al:2023,
-    author    = {Gagel, Julian and Hustedt, Jasper and Lüttig, Timo and Berg, Theresa and Abrami, Giuseppe and Mehler, Alexander},
-    title     = {News in Time and Space: Global Event Exploration in Virtual Reality},
-    booktitle = {Proceedings of 34th ACM Hypertext Conference (HT 23)},
-    year      = {2023},
-    location  = {Rome},
-    note      = {accpeted}
+  author    = {Gagel, Julian and Hustedt, Jasper and L\"{u}ttig, Timo and Berg, Theresa
+               and Abrami, Giuseppe and Mehler, Alexander},
+  title     = {News in Time and Space: Global Event Exploration in Virtual Reality},
+  year      = {2023},
+  isbn      = {9798400702327},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  url       = {https://doi.org/10.1145/3603163.3609080},
+  doi       = {10.1145/3603163.3609080},
+  abstract  = {We present News in Time and Space (NiTS), a virtual reality application
+               for visualization, filtering and interaction with geo-referenced
+               events based on GDELT. It can be used both via VR glasses and
+               as a desktop solution for shared use by multiple users with Ubiq.
+               The aim of NiTS is to provide overviews of global events and trends
+               in order to create a resource for their monitoring and analysis.},
+  booktitle = {Proceedings of the 34th ACM Conference on Hypertext and Social Media},
+  articleno = {7},
+  numpages  = {3},
+  location  = {Rome, Italy},
+  series    = {HT '23},
+  pdf       = {https://dl.acm.org/doi/pdf/10.1145/3603163.3609080}
 }
 ```
